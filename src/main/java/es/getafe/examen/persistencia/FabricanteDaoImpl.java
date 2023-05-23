@@ -8,8 +8,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Repository;
+
 import es.getafe.examen.modelo.Fabricante;
 
+@Repository
 public class FabricanteDaoImpl implements FabricanteDao {
 
 	private EntityManagerFactory emf;

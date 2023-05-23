@@ -6,8 +6,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Repository;
+
 import es.getafe.examen.modelo.Producto;
 
+@Repository
 public class ProductoDaoImpl implements ProductoDao {
 
 	private EntityManagerFactory emf;

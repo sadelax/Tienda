@@ -9,9 +9,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Repository;
+
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import es.getafe.examen.modelo.Usuario;
 
+@Repository
 public class UsuarioDaoImpl implements UsuarioDao {
 
 	private EntityManager em;

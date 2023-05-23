@@ -5,8 +5,10 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,10 +19,19 @@ public class ActionsFactory {
 
 	public final String VISTA_PRE = "/WEB-INF/vistas/";
 	public final String VISTA_POST = ".jsp";
-
-	public ActionsFactory() {
-		creaActions();
-	}
+	
+	@Autowired
+	private CerrarSesionAction cerrarSesion;
+	@Autowired
+	private ListadoProductosAction listadoProducto;
+	@Autowired
+	private LoginAction login;
+	@Autowired
+	private ProductosFabricanteAction productosFabricante;
+	@Autowired
+	private RegistroAction registro;
+	@Autowired
+	private MenuPrincipalAction menuPrincipal;
 
 	public Action getAction(HttpServletRequest req) {
 		String pathInfo = req.getServletPath().substring(5);
@@ -46,16 +57,17 @@ public class ActionsFactory {
 		return respuesta;
 	}
 
+	@PostConstruct
 	private void creaActions() {
 		actions = new HashMap<>();
-		actions.put("GET-POST/login", new LoginAction());
-		actions.put("GET/menu_principal", new MenuPrincipalAction());
-		actions.put("GET-POST/listado_productos", new ListadoProductosAction());
-		actions.put("GET-POST/registro", new RegistroAction());
-		actions.put("GET/registro_ok", actions.get("GET/menu_principal"));
-		actions.put("GET/productos_fabricante", new ProductosFabricanteAction());
-		actions.put("URL_INCORRECTA", new CerrarSesionAction());
-		actions.put("GET/cerrar_sesion", actions.get("URL_INCORRECTA"));
+		actions.put("GET-POST/login", login);
+		actions.put("GET/menu_principal", menuPrincipal);
+		actions.put("GET-POST/listado_productos", listadoProducto);
+		actions.put("GET-POST/registro", registro);
+		actions.put("GET/registro_ok", menuPrincipal);
+		actions.put("GET/productos_fabricante", productosFabricante);
+		actions.put("URL_INCORRECTA", cerrarSesion);
+		actions.put("GET/cerrar_sesion", cerrarSesion);
 
 		urlPublica = new HashSet<>();
 		urlPublica.add("login");

@@ -4,16 +4,12 @@ import java.io.IOException;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.HttpRequestHandler;
 
-import es.getafe.examen.negocio.Tienda;
-import es.getafe.examen.negocio.TiendaImpl;
 import es.getafe.examen.vista.actions.Action;
 import es.getafe.examen.vista.actions.ActionsFactory;
 

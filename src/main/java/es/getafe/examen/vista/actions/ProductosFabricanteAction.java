@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import es.getafe.examen.modelo.Fabricante;
 import es.getafe.examen.negocio.Tienda;
-import es.getafe.examen.negocio.TiendaImpl;
 
+@Component
 public class ProductosFabricanteAction implements Action {
-	
+
+	@Autowired
 	private Tienda neg;
-	
-	public ProductosFabricanteAction() {
-		neg = new TiendaImpl();
-	}
 
 	@Override
 	public String get(String path, HttpServletRequest req, HttpServletResponse resp) {
