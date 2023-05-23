@@ -1,0 +1,254 @@
+*{
+  box-sizing: border-box;
+  font-family: courier;
+}
+body{
+  background-color: white;
+}
+
+main form{
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+main form div input{
+  margin: 10px;  
+}
+
+main form select{
+  text-align: center;
+  font-size: 35px;
+}
+
+nav ul {
+  text-align: center;
+  list-style: none; /* para quitar los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block; /* para hacer que los elementos sean en línea */
+}
+
+nav a {
+  display: block; /* para hacer que los elementos sean clicables en toda su área */
+  padding: 10px;
+  text-decoration: none;
+  text-decoration: underline; /* subrayado en el texto del enlace */
+}
+
+#formulario{
+  background-color: white;
+  border: 2px solid #ccc;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+}
+
+#formulario_reg{
+  background-color:   #ffee58;
+  border: 2px solid  #ffee58;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+}
+
+#registro_ok{
+  text-align: center;
+  background-color:   #ffee58;
+  border: 2px solid  #ffee58;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+}
+a{
+  color: black;
+}
+
+header h2{
+  text-align: center;
+}
+
+form#frm_log input{
+  width: 75%;
+  color: black;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  font-family: courier;
+  transition: all 1s ease;
+}
+
+form#frm_log input:hover{
+   width: 75%;
+  background-color: grey;
+  color: white;
+  opacity: 50%;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  font-family: courier;
+}
+
+#login{
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 59%;
+  padding: 5px;
+  background-color: salmon;
+  opacity: 70%;
+  font-family: courier;
+  font-size: 30px;
+  transition: all 2s linear;
+}
+
+#login:hover{
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 59%;
+  padding: 5px;
+  background-color: salmon;
+  color: black;
+  opacity: 100%;
+  font-family: courier;
+  font-size: 30px;
+}
+#botones > p{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#cuerpo{
+	text-align: center;
+	font-family: courier;
+}
+
+p{
+  width: 75%;
+  margin: auto;
+}
+
+img{
+  opacity: 0%;
+	width: 70%;
+	margin: 20px auto;
+	border: solid 1px black;
+}
+
+img:hover{
+  opacity: 100%;
+	width: 70%;
+	margin: 20px auto;
+	border: solid 1px black;
+}
+
+span{
+  font-family: lucida console;
+  font-weight: bold;
+  color: purple;
+}
+
+p#error{
+  margin: 10px auto;
+  font-family: courier;
+	color: red;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+p#campos_obligatorios{
+  transition: all 2s linear;
+}
+
+p#campos_obligatorios:hover{
+  color: red;
+  font-size: 40px;
+}
+
+main form{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+tr, th, td{
+  text-align: center;
+  width: 30px;
+  padding: 10px;
+    transition: all 0.5s linear;
+}
+
+tr:hover{
+  background-color: salmon;
+  text-align: center;
+  width: 30px;
+  padding: 10px;
+  opacity: 60%;
+}
+
+thead tr:hover {
+  pointer-events: none;
+}
+
+#tabla_datos thead th{
+  border-bottom: 1px solid black;
+}
+
+#tabla_ofertas thead th{
+  border-bottom: 1px solid black;
+}
+
+#tabla_datos tfoot td{
+  border-top: 1px solid black;
+  background-color: salmon;
+}
+
+#input_descuento{
+  display: block;
+  margin: auto;
+  padding: 10px;
+  font-size: 1.05em;
+  border-radius: 7px;
+  transition: all 2s linear;
+}
+
+#input_descuento:hover{
+  background-color: salmon;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  font-size: 1.05em;
+  border-radius: 7px;
+  opacity: 60%;
+}
+
+main table{
+	justify-content: center;
+	float: left;
+	  width: 45%;
+	margin: 40px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+	border-spacing: 0;
+	border-collapse: separate;
+  }
+
+#frm_envio {
+  display: flex;
+}
+
+#frm_envio button {
+  flex: 1;
+}

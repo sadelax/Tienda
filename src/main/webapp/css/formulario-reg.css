@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";
+
+form#frm_reg input{
+  width: 75%;
+  color: black;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  font-family: courier;
+  transition: all 1s ease;
+}
+
+form#frm_reg input:hover{
+   width: 75%;
+  background-color: grey;
+  color: white;
+  opacity: 50%;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  font-family: courier;
+}
+
+input#frm_reg{
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 59%;
+  padding: 5px;
+  background-color: salmon;
+  opacity: 70%;
+  font-family: courier;
+  font-size: 30px;
+  transition: all 2s linear;
+}
+
+input#frm_reg:hover{
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 59%;
+  padding: 5px;
+  background-color: salmon;
+  color: black;
+  opacity: 100%;
+  font-family: courier;
+  font-size: 30px;
+}
