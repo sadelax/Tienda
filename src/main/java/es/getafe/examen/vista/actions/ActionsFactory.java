@@ -7,6 +7,9 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ActionsFactory {
 
 	private Map<String, Action> actions;
@@ -20,13 +23,14 @@ public class ActionsFactory {
 	}
 
 	public Action getAction(HttpServletRequest req) {
-		String clave = req.getMethod() + req.getPathInfo();
+		String pathInfo = req.getServletPath().substring(5);
+		String clave = req.getMethod() + pathInfo;
 		/////////////// GET o POST //////menu_principal
-		String clave2 = "GET-POST" + req.getPathInfo();
+		String clave2 = "GET-POST" + pathInfo;
 
 		Action respuesta;
 
-		if (urlPublica.contains(req.getPathInfo().substring(1)) || isSessionActive(req)) {
+		if (urlPublica.contains(pathInfo.substring(1)) || isSessionActive(req)) {
 			if (actions.containsKey(clave)) {
 				respuesta = actions.get(clave);				
 			}

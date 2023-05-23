@@ -7,27 +7,25 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import es.getafe.examen.modelo.Fabricante;
 import es.getafe.examen.modelo.Producto;
 import es.getafe.examen.modelo.Usuario;
 import es.getafe.examen.persistencia.FabricanteDao;
-import es.getafe.examen.persistencia.FabricanteDaoImpl;
 import es.getafe.examen.persistencia.ProductoDao;
-import es.getafe.examen.persistencia.ProductoDaoImpl;
 import es.getafe.examen.persistencia.UsuarioDao;
-import es.getafe.examen.persistencia.UsuarioDaoImpl;
 
+@Service
 public class TiendaImpl implements Tienda {
 
+	@Autowired
 	private ProductoDao pDao;
+	@Autowired
 	private FabricanteDao fDao;
+	@Autowired
 	private UsuarioDao uDao;
-	
-	public TiendaImpl() {
-		pDao = new ProductoDaoImpl();
-		fDao = new FabricanteDaoImpl();
-		uDao = new UsuarioDaoImpl();
-	}
 	
 	@Override
 	public Set<Producto> getProductos() {

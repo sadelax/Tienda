@@ -12,7 +12,7 @@ public interface Action {
 		
 		String vista = null;
 		
-		String path = req.getPathInfo() != null ? req.getPathInfo().substring(1) : "";
+		String path = req.getServletPath() != null ? req.getServletPath().substring(6) : "";
 		
 		switch(req.getMethod().toLowerCase()) {
 		case "get":
