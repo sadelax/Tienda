@@ -1,5 +1,7 @@
 package es.getafe.examen.vista.actions;
 
+import static es.getafe.examen.vista.Util.isNotEmpty;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -9,9 +11,6 @@ import org.springframework.stereotype.Component;
 
 import es.getafe.examen.modelo.Usuario;
 import es.getafe.examen.negocio.Tienda;
-import es.getafe.examen.negocio.TiendaImpl;
-
-import static es.getafe.examen.vista.Util.isNotEmpty;
 
 @Component
 public class LoginAction implements Action {

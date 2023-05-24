@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.cursogetafe</groupId>
-	<artifactId>W10_Tienda_Spring</artifactId>
+	<artifactId>W11_Tienda_Spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>W10_Tienda_Spring Maven Webapp</name>
+	<name>W11_Tienda_Spring Maven Webapp</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 	<properties>
@@ -64,7 +64,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>W10_Tienda_Spring</finalName>
+		<finalName>W11_Tienda_Spring</finalName>
 		<pluginManagement>
 			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 			<plugins>
